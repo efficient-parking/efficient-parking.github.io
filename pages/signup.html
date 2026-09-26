@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <title>Registrati | Efficient Parking</title>
+  <link rel="icon" href="../assets/images/icon/favicon.ico">
+  <link rel="stylesheet" href="../assets/css/main/modern.css">
+  <link rel="stylesheet" href="../assets/css/auth.css">
+</head>
+<body class="auth-page">
+  <header class="header auth-header"><a class="brand" href="../index.html" aria-label="Efficient Parking, home"><img src="../assets/images/main-logo.png" alt="Efficient Parking"></a><a class="back-home" href="../index.html">← Torna alla home</a><button class="language-toggle" type="button" aria-label="Switch to English">EN</button></header>
+  <main class="auth-layout signup-layout">
+    <aside class="auth-aside"><p class="eyebrow">Efficient. Always. Everywhere.</p><h1>Inizia a parcheggiare con facilità.</h1><p>Crea il tuo account Efficient Parking per usare il servizio da PC e smartphone.</p><img src="../assets/images/Phone_Images.png" alt="Efficient Parking sul tuo smartphone"></aside>
+    <section class="auth-card" aria-labelledby="form-title"><p class="eyebrow">Il tuo account</p><h2 id="form-title">Registrati subito</h2>
+      <div class="alert" role="status">Il tuo account è stato registrato, verrai reindirizzato tra pochi istanti</div><div class="alert-negative" role="alert">Il tuo account non è stato registrato, inserisci valori validi</div><div class="alert-targa" role="alert">Targa già utilizzata</div><div class="alert-email" role="alert">Email già utilizzata</div>
+      <form class="validate-form auth-form" id="contactForm" novalidate>
+        <label class="wrap-input100 validate-input"><span>Nome e cognome</span><input class="input100" id="name" type="text" name="name" placeholder="Nome e cognome" autocomplete="name" required></label>
+        <label class="wrap-input100 validate-input"><span>Targa</span><input class="input100" id="targa" type="text" name="targa" placeholder="Es. AB123CD" required></label>
+        <label class="wrap-input100 validate-input"><span>Indirizzo e-mail</span><input class="input100" id="email" type="email" name="email" placeholder="nome@esempio.it" autocomplete="email" required></label>
+        <label class="wrap-input100 validate-input"><span>Numero di telefono</span><input class="input100" id="phonenumber" type="tel" name="phonenumber" placeholder="Numero di telefono" autocomplete="tel" required></label>
+        <label class="wrap-input100 validate-input"><span>Username</span><input class="input100" id="username" type="text" name="username" placeholder="Scegli un username" autocomplete="username" required></label>
+        <label class="wrap-input100 validate-input"><span>Password</span><span class="password-field"><button class="btn-show-pass" type="button" aria-label="Mostra o nascondi password"><span aria-hidden="true">◉</span></button><input class="input100" id="password" type="password" name="password" placeholder="Crea una password" autocomplete="new-password" required></span></label>
+        <button class="button auth-submit" type="submit">Registrati <span aria-hidden="true">→</span></button>
+      </form>
+      <div class="auth-links"><p>Hai già un account? <a href="login.html">Accedi</a></p></div>
+    </section>
+  </main>
+  <script src="../assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+  <script src="../assets/js/signup/signup_beta.js"></script>
+  <script src="../assets/js/signup/signup_alpha.js"></script>
+  <script src="../assets/js/language.js" defer></script>
+</body>
+</html>

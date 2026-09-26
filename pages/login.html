@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <title>Accedi | Efficient Parking</title>
+  <link rel="icon" href="../assets/images/icon/favicon.ico">
+  <link rel="stylesheet" href="../assets/css/main/modern.css">
+  <link rel="stylesheet" href="../assets/css/auth.css">
+</head>
+<body class="auth-page">
+  <header class="header auth-header"><a class="brand" href="../index.html" aria-label="Efficient Parking, home"><img src="../assets/images/main-logo.png" alt="Efficient Parking"></a><a class="back-home" href="../index.html">← Torna alla home</a><button class="language-toggle" type="button" aria-label="Switch to English">EN</button></header>
+  <main class="auth-layout">
+    <aside class="auth-aside"><p class="eyebrow">Efficient. Always. Everywhere.</p><h1>Parcheggiare, con semplicità.</h1><p>Accedi a Efficient Parking per gestire il tuo parcheggio dal web.</p><img src="../assets/images/Phone_Images.png" alt="Efficient Parking sul tuo smartphone"></aside>
+    <section class="auth-card" aria-labelledby="form-title"><p class="eyebrow">Bentornato</p><h2 id="form-title">Benvenuto</h2><p class="demo-hint">Accesso demo: targa <strong>AB123CD</strong> · password <strong>parking123</strong></p>
+      <div class="alert-targa" role="alert">Targa non esistente</div><div class="alert-password" role="alert">Password errata</div>
+      <form class="validate-form auth-form" id="contactForm" novalidate>
+        <label class="wrap-input100 validate-input"><span>Targa</span><input class="input100" id="targa" type="text" name="targa" placeholder="Es. AB123CD" autocomplete="username" required></label>
+        <label class="wrap-input100 validate-input"><span>Password</span><span class="password-field"><button class="btn-show-pass" type="button" aria-label="Mostra o nascondi password"><span aria-hidden="true">◉</span></button><input class="input100" id="password" type="password" name="password" placeholder="La tua password" autocomplete="current-password" required></span></label>
+        <button class="button auth-submit" type="submit">Accedi <span aria-hidden="true">→</span></button>
+      </form>
+      <div class="auth-links"><p>Non hai un account? <a href="signup.html">Iscriviti</a></p><p>Hai dimenticato la password? <a href="recovery.html">Recuperala</a></p></div>
+    </section>
+  </main>
+  <script src="../assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+  <script src="../assets/js/signin/signin_beta.js"></script>
+  <script src="../assets/js/signin/signin_alpha.js"></script>
+  <script src="../assets/js/language.js" defer></script>
+</body>
+</html>

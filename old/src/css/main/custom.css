@@ -22106,12 +22106,26 @@
 .hero-image .absolute-image {
   position: absolute;
   bottom: 0;
+  width: 55%;
+}
+
+.hero-image .absolute-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-image .absolute-image.image-1 {
   left: 0;
+}
+
+.hero-image .absolute-image.image-2 {
+  left: 42%;
 }
 
 @media (min-width: 1600px) {
   .hero-image .absolute-image.image-2 {
-    left: 18%;
+    left: 42%;
   }
 }
 
@@ -22589,6 +22603,15 @@
   margin-bottom: 40px;
 }
 
+.testimonial-section .testimonial-widget .widget-picture img {
+  display: block;
+  width: 90px;
+  height: 90px;
+  max-width: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .example-section {
   background-color: #222d3d;
   z-index: 1;
@@ -22947,9 +22970,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 45px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 @media (min-width: 768px) {
@@ -22960,6 +22990,16 @@
 
 .footer-social-list li {
   margin-right: 18px;
+}
+
+.footer-social-list li:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 575px) {
+  .footer-social-list li {
+    margin-right: 10px;
+  }
 }
 
 .contact-title {

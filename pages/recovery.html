@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <title>Recupero password | Efficient Parking</title>
+  <link rel="icon" href="../assets/images/icon/favicon.ico">
+  <link rel="stylesheet" href="../assets/css/main/modern.css">
+  <link rel="stylesheet" href="../assets/css/auth.css">
+</head>
+<body class="auth-page">
+  <header class="header auth-header">
+    <a class="brand" href="../index.html" aria-label="Efficient Parking, home"><img src="../assets/images/main-logo.png" alt="Efficient Parking"></a>
+    <a class="back-home" href="../index.html">← Torna alla home</a><button class="language-toggle" type="button" aria-label="Switch to English">EN</button>
+  </header>
+  <main class="auth-layout recovery-layout">
+    <aside class="auth-aside">
+      <p class="eyebrow">Efficient. Always. Everywhere.</p>
+      <h1>Ritrova l’accesso al tuo account.</h1>
+      <p>Puoi utilizzare il servizio Efficient Parking sia da PC sia da smartphone.</p>
+      <img src="../assets/images/Phone_Images.png" alt="Efficient Parking sul tuo smartphone">
+    </aside>
+    <section class="auth-card recovery-card" aria-labelledby="recovery-title">
+      <p class="eyebrow">Assistenza account</p>
+      <h2 id="recovery-title">Hai dimenticato la password?</h2>
+      <p class="recovery-description">Inserisci il tuo indirizzo email dove ti invieremo un link per recuperare la password.</p>
+      <form class="auth-form" id="recoveryForm">
+        <label class="wrap-input100" for="recovery-email"><span>Email</span><input class="input100" id="recovery-email" type="email" name="email" placeholder="nome@esempio.it" autocomplete="email" required></label>
+        <button class="button auth-submit" type="submit">Invia <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="recovery-notice" id="recoveryNotice" role="status" hidden>Il recupero password non è attivo nella modalità demo.</p>
+      <div class="auth-links"><p>Ti sei ricordato la password? <a href="login.html">Accedi</a></p></div>
+    </section>
+  </main>
+  <script src="../assets/js/recovery.js" defer></script>
+  <script src="../assets/js/language.js" defer></script>
+</body>
+</html>

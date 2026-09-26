@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <title>Il tuo profilo | Efficient Parking</title>
+  <link rel="icon" href="../assets/images/icon/favicon.ico">
+  <link rel="stylesheet" href="../assets/css/main/modern.css">
+  <link rel="stylesheet" href="../assets/css/account.css">
+</head>
+<body class="account-page">
+  <header class="header account-header">
+    <a class="brand" href="../index.html" aria-label="Efficient Parking, home"><img src="../assets/images/main-logo.png" alt="Efficient Parking"></a>
+    <nav class="navigation account-navigation" aria-label="Navigazione profilo">
+      <a href="#sec-019d">Dati utente</a><a href="#sec-dd7a">Contatore</a><a href="#sec-c8b8">Mappa</a><a href="#sec-dd7">Pagamento</a>
+      <a class="button button-small logout-link" id="logout" href="login.html">Esci</a>
+    </nav>
+    <button class="language-toggle" type="button" aria-label="Switch to English">EN</button>
+  </header>
+  <main class="account-main">
+    <section class="dashboard-section profile-section" id="sec-019d">
+      <div class="account-wrap">
+        <div class="section-intro"><p class="eyebrow">Il tuo profilo</p><h1>Dati utente</h1><p>Le informazioni del tuo parcheggio, raccolte in un solo posto.</p></div>
+        <div class="data-grid">
+          <article class="data-card"><span class="card-icon" aria-hidden="true">01</span><p class="card-label">Targa</p><p class="card-value" id="targa">—</p></article>
+          <article class="data-card"><span class="card-icon" aria-hidden="true">02</span><p class="card-label">Parcheggio</p><p class="card-value" id="parcheggio">—</p></article>
+          <article class="data-card"><span class="card-icon" aria-hidden="true">03</span><p class="card-label">Data di entrata</p><p class="card-value" id="entrata">—</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="dashboard-section timer-section" id="sec-dd7a">
+      <div class="account-wrap">
+        <div class="section-intro"><p class="eyebrow">Tempo di sosta</p><h2>Contatore</h2></div>
+        <div class="timer-grid" aria-label="Tempo trascorso">
+          <article class="timer-card"><span id="h">00</span><p>Ore</p></article>
+          <article class="timer-card"><span id="m">00</span><p>Minuti</p></article>
+          <article class="timer-card"><span id="s">00</span><p>Secondi</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="dashboard-section map-section" id="sec-c8b8">
+      <div class="account-wrap">
+        <div class="section-intro"><p class="eyebrow">Vicino a te</p><h2>Maps</h2></div>
+        <div class="map-frame"><iframe title="Mappa del Park Fogazzaro a Vicenza" src="https://maps.google.com/maps?output=embed&amp;q=Park%20Fogazzaro%2C%20Contr%C3%A0%20Pedemuro%20San%20Biagio%2C%20Vicenza%2C%20VI&amp;t=m&amp;hl=it" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      </div>
+    </section>
+    <section class="dashboard-section payment-section" id="sec-dd7">
+      <div class="account-wrap">
+        <div class="section-intro"><p class="eyebrow">Riepilogo</p><h2>Pagamento</h2></div>
+        <div class="payment-grid">
+          <article class="payment-card"><p class="card-label">Data di uscita</p><p class="payment-value" id="uscita">—</p></article>
+          <article class="payment-card"><p class="card-label">Tempo trascorso</p><p class="payment-value" id="durata">—</p></article>
+          <article class="payment-card"><p class="card-label">Costo</p><p class="payment-value" id="costo">—</p></article>
+        </div>
+        <div class="paypal-panel"><div id="paypal-button-container"></div></div>
+      </div>
+    </section>
+  </main>
+  <footer class="account-footer">
+    <div class="account-wrap footer-row">
+      <a class="footer-home" href="../index.html">Torna al sito ↗</a>
+    </div>
+  </footer>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=EUR" data-sdk-integration-source="button-factory"></script>
+  <script src="../assets/js/account.js"></script>
+  <script src="../assets/js/language.js" defer></script>
+  <script>
+    if (window.paypal) {
+      paypal.Buttons({
+        style: { shape: 'rect', color: 'black', layout: 'vertical', label: 'paypal' },
+        createOrder: function(data, actions) {
+          return actions.order.create({ purchase_units: [{ description: 'Pagamento', amount: { currency_code: 'EUR', value: 18 } }] });
+        },
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+        }
+      }).render('#paypal-button-container');
+    }
+  </script>
+</body>
+</html>

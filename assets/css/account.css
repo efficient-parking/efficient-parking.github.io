@@ -1,0 +1,64 @@
+.account-page{min-height:100vh;background:#f7f7f7;color:#111;font-family:'DM Sans',Arial,sans-serif}
+.account-page html{scroll-padding-top:92px}
+.account-page .account-header{height:78px;padding-inline:max(24px,calc((100% - 1120px)/2));position:sticky;top:0;background:#fff;border-bottom:1px solid #e5e5e5;box-shadow:0 3px 16px rgba(0,0,0,.04)}
+.account-page .brand img{filter:grayscale(1)}
+.account-navigation{gap:20px}
+.account-navigation>a:not(.button){font-weight:600}
+.account-navigation .logout-link{background:#111;color:#fff}
+.account-navigation .logout-link:hover{background:#333;color:#fff}
+.account-main{padding-top:0}
+.account-wrap{width:min(1060px,calc(100% - 48px));margin-inline:auto}
+.dashboard-section{padding:76px 0;scroll-margin-top:92px}
+.profile-section,.map-section{background:#fff}
+.timer-section,.payment-section{background:#f7f7f7}
+.section-intro{margin-bottom:30px}
+.section-intro .eyebrow{margin-bottom:10px;color:#555}
+.section-intro h1,.section-intro h2{margin:0 0 10px;font:800 clamp(30px,4vw,42px)/1.12 Manrope,Arial,sans-serif;letter-spacing:-.04em}
+.section-intro>p:last-child{margin:0;color:#555}
+.data-grid,.payment-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.data-card,.payment-card{min-height:164px;padding:23px 24px;border:1px solid #e5e5e5;border-radius:13px;background:#fff;box-shadow:0 8px 26px rgba(0,0,0,.035)}
+.card-icon{display:grid;place-items:center;width:36px;height:36px;margin-bottom:21px;border-radius:50%;background:#f1f1f1;color:#111;font-size:12px;font-weight:700}
+.card-label{margin:0 0 7px;color:#555;font-size:13px;font-weight:600}
+.card-value,.payment-value{margin:0;color:#111;font-size:19px;font-weight:700;line-height:1.4;overflow-wrap:anywhere}
+.timer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.timer-card{padding:27px 24px;border-radius:13px;background:#111;color:#fff;text-align:center}
+.timer-card span{font:800 clamp(42px,6vw,64px)/1 Manrope,Arial,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:-.04em}
+.timer-card p{margin:9px 0 0;color:#ccc;font-size:13px;font-weight:600}
+.map-frame{height:400px;border:1px solid #e5e5e5;border-radius:14px;overflow:hidden;background:#eee}
+.map-frame iframe{width:100%;height:100%;border:0;filter:grayscale(1)}
+.payment-card{min-height:130px;display:flex;flex-direction:column;justify-content:center}
+.payment-value{font-size:23px;font-variant-numeric:tabular-nums}
+.paypal-panel{max-width:440px;margin:26px auto 0;padding:20px 24px;border:1px solid #e5e5e5;border-radius:13px;background:#fff}
+.account-footer{padding:28px 0;background:#111;color:#fff}
+.footer-row{display:flex;align-items:center;justify-content:space-between;gap:22px}
+.footer-brand img{width:150px;filter:grayscale(1)}
+.footer-row p{margin:0;color:#ddd;font-size:14px}
+.footer-row p a,.footer-home{color:#fff;font-weight:600}
+.footer-row a:hover{text-decoration:underline}
+@media(max-width:760px){
+ .account-page .account-header{height:auto;min-height:70px;padding:10px 18px;flex-wrap:wrap;gap:8px}
+ .account-page .brand img{width:145px}
+ .account-page .account-navigation{display:flex;position:static;top:auto;left:auto;right:auto;width:100%;gap:6px;overflow-x:auto;justify-content:flex-start;align-items:center;flex-direction:row;padding:0 0 2px;background:transparent;border:0}
+ .account-navigation>a:not(.button){flex:none;padding:8px 10px;font-size:13px}
+ .account-navigation .logout-link{flex:none;margin-left:auto;padding:8px 12px;font-size:13px}
+ .account-page .account-header>.language-toggle{margin-left:auto}
+ .account-wrap{width:min(100% - 36px,560px)}
+ .dashboard-section{padding:54px 0;scroll-margin-top:126px}
+ .section-intro{margin-bottom:22px}
+ .data-grid,.payment-grid{grid-template-columns:1fr;gap:11px}
+ .data-card{min-height:0;padding:18px;display:grid;grid-template-columns:38px 1fr;column-gap:13px;align-items:center}
+ .card-icon{grid-row:1 / span 2;margin:0}
+ .data-card .card-label{align-self:end;margin-bottom:1px}
+ .data-card .card-value{align-self:start;font-size:16px}
+ .timer-grid{gap:10px}
+ .timer-card{padding:22px 8px}
+ .timer-card span{font-size:clamp(34px,10vw,48px)}
+ .timer-card p{font-size:12px}
+ .map-frame{height:310px}
+ .payment-card{min-height:0;padding:18px}
+ .payment-value{font-size:20px}
+ .paypal-panel{padding:16px;margin-top:18px}
+ .footer-row{flex-direction:column;text-align:center}
+ .footer-brand img{width:138px}
+}
+@media(prefers-reduced-motion:reduce){.account-page html{scroll-behavior:auto}}

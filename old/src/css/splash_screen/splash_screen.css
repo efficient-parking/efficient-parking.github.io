@@ -17,22 +17,29 @@ body {
 
 .splash_logo {
   position: absolute;
-  margin: -15px 0 0 -25px;
-  top: 50vh;
+  margin: 0;
+  top: 50%;
   z-index: 5;
-  left: 50vw;
-  width: 50px;
+  left: 50%;
+  width: 70px;
   text-align: center;
-  height: 30px;
+  height: 70px;
   font-size: 26px;
   font-weight: 600;
   color: #ffffff;
   opacity: 1;
+  transform: translate(-50%, -50%);
   will-change: opacity;
   -webkit-animation: logo .3s ease-in 1.5s forwards, off .6s ease-in-out 3.2s forwards;
   -moz-animation: logo .3s ease-in 1.5s forwards, off .6s ease-in-out 3.2s forwards;
   -o-animation: logo .3s ease-in 1.5s forwards, off .6s ease-in-out 3.2s forwards;
   animation: logo .3s ease-in 1.5s forwards, off .6s ease-in-out 3.2s forwards;
+}
+
+.splash_logo img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .splash_svg {
@@ -56,12 +63,12 @@ body {
   height: 100%;
   fill: #ffffff;
   stroke: 0;
-  -webkit-clip-path: polygon(45vw 45vh, 55vw 45vh, 55vw 60vh, 45vw 60vh);
-  clip-path: polygon(48vw 47vh, 53vw 47vh, 53vw 57vh, 48vw 57vh);
-  -webkit-animation: expand .7s ease-in forwards 2.7s;
-  -moz-animation: expand .7s ease-in forwards 2.7s;
-  -o-animation: expand .7s ease-in forwards 2.7s;
-  animation: expand .7s ease-in forwards 2.7s;
+  -webkit-clip-path: polygon(46vw 43vh, 54vw 43vh, 54vw 59vh, 46vw 59vh);
+  clip-path: polygon(46vw 43vh, 54vw 43vh, 54vw 59vh, 46vw 59vh);
+  -webkit-animation: expand .9s cubic-bezier(.22,.61,.36,1) forwards 2.7s;
+  -moz-animation: expand .9s cubic-bezier(.22,.61,.36,1) forwards 2.7s;
+  -o-animation: expand .9s cubic-bezier(.22,.61,.36,1) forwards 2.7s;
+  animation: expand .9s cubic-bezier(.22,.61,.36,1) forwards 2.7s;
 }
 .splash_minimize {
   position: absolute;
